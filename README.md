@@ -1,3 +1,7 @@
+[<img src="https://sling.apache.org/res/logos/sling.png"/>](https://sling.apache.org)
+
+ [![Build Status](https://builds.apache.org/buildStatus/icon?job=Sling/sling-org-apache-sling-contentparser-api/master)](https://builds.apache.org/job/Sling/job/sling-org-apache-sling-contentparser-api/job/master) [![Test Status](https://img.shields.io/jenkins/t/https/builds.apache.org/job/Sling/job/sling-org-apache-sling-contentparser-api/job/master.svg)](https://builds.apache.org/job/Sling/job/sling-org-apache-sling-contentparser-api/job/master/test_results_analyzer/) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![contentparser](https://sling.apache.org/badges/group-contentparser.svg)](https://github.com/apache/sling-aggregator/blob/master/docs/groups/contentparser.md)
+
 Apache Sling Content Parser API
 ====
 This module is part of the [Apache Sling](https://sling.apache.org) project.
@@ -16,4 +20,3 @@ Implementations of the API are made available from separate bundles:
 2. XML - [`org.apache.sling.contentparser.xml`](https://github.com/apache/sling-org-apache-sling-contentparser-xml)
 3. Jackrabbit Filevault XML ([Enhanced JCR 2.0 Document View](https://jackrabbit.apache.org/filevault/docview.html)) - [`org.apache.sling.contentparser.xml-jcr`](https://github.com/apache/sling-org-apache-sling-contentparser-xml-jcr) (the only module depending on the JCR / 
 Jackrabbit APIs)
-
