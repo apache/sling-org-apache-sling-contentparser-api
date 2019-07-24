@@ -105,7 +105,7 @@ public class ParserOptions {
      * @return this
      */
     public ParserOptions ignorePropertyNames(Set<String> value) {
-        this.ignorePropertyNames = value;
+        this.ignorePropertyNames = Collections.unmodifiableSet(value);
         return this;
     }
 
@@ -120,7 +120,7 @@ public class ParserOptions {
      * @return this
      */
     public ParserOptions ignoreResourceNames(Set<String> value) {
-        this.ignoreResourceNames = value;
+        this.ignoreResourceNames = Collections.unmodifiableSet(value);
         return this;
     }
 
@@ -135,7 +135,7 @@ public class ParserOptions {
      * @return this
      */
     public ParserOptions removePropertyNamePrefixes(Set<String> value) {
-        this.removePropertyNamePrefixes = value;
+        this.removePropertyNamePrefixes = Collections.unmodifiableSet(value);
         return this;
     }
 

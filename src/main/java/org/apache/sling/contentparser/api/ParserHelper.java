@@ -42,6 +42,9 @@ public final class ParserHelper {
             DateTimeFormatter.ofPattern(ISO_8601_MILLISECONDS_DATE_FORMAT,
                     DATE_FORMAT_LOCALE);
 
+    // static methods only
+    private ParserHelper() {}
+
     /**
      * Attempts to parse a {@code string} using first the {@link #ISO_8601_MILLISECONDS_DATE_FORMAT} format and then the {@link
      * #ECMA_DATE_FORMAT}.
@@ -95,7 +98,7 @@ public final class ParserHelper {
         return convertedArray;
     }
 
-    private static Calendar parseDate(String string, DateTimeFormatter formatter) throws DateTimeParseException {
+    private static Calendar parseDate(String string, DateTimeFormatter formatter) {
         final ZonedDateTime zonedDateTime = ZonedDateTime.parse(string, formatter);
         final Instant instant = zonedDateTime.toInstant();
         Calendar calendar = Calendar.getInstance();

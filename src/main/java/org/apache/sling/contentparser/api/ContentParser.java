@@ -60,6 +60,6 @@ public interface ContentParser {
      * @throws IOException    when an I/O error occurs
      * @throws ParseException when a parsing error occurs.
      */
-    void parse(ContentHandler contentHandler, InputStream inputStream, ParserOptions parserOptions) throws IOException, ParseException;
+    void parse(ContentHandler contentHandler, InputStream inputStream, ParserOptions parserOptions) throws IOException;
 
 }
