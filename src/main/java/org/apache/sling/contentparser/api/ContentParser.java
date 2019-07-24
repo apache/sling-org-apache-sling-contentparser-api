@@ -57,8 +57,7 @@ public interface ContentParser {
      * @param contentHandler content handler that accepts the parsed content
      * @param inputStream    stream with serialized content
      * @param parserOptions  parser options, providing different settings for handling the serialized content
-     * @throws IOException    when an I/O error occurs
-     * @throws ParseException when a parsing error occurs.
+     * @throws IOException when an I/O or parsing error occurs
      */
     void parse(ContentHandler contentHandler, InputStream inputStream, ParserOptions parserOptions) throws IOException;
 

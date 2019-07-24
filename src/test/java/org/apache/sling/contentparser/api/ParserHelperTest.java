@@ -66,31 +66,31 @@ public class ParserHelperTest {
         assertEquals(empty, ParserHelper.convertSingleTypeArray(empty));
 
         Object[] nullValues = new Object[] {"string", null};
-        ParseException nullValuesException = null;
+        IllegalArgumentException nullValuesException = null;
         try {
             ParserHelper.convertSingleTypeArray(nullValues);
-        } catch (ParseException e) {
+        } catch (IllegalArgumentException e) {
             nullValuesException = e;
         }
-        assertNotNull("Expected a ParseException when the Object array contains multiple types.", nullValuesException);
+        assertNotNull("Expected a IllegalArgumentException when the Object array contains multiple types.", nullValuesException);
 
         Object[] maps = new Object[] {Collections.emptyMap()};
-        ParseException mapsException = null;
+        IllegalArgumentException mapsException = null;
         try {
             ParserHelper.convertSingleTypeArray(maps);
-        } catch (ParseException e) {
+        } catch (IllegalArgumentException e) {
             mapsException = e;
         }
-        assertNotNull("Expected a ParseException when the Object array contains Map objects.", mapsException);
+        assertNotNull("Expected a IllegalArgumentException when the Object array contains Map objects.", mapsException);
 
         Object[] differentTypes = new Object[] {"string", 1, 1L, 1F, Boolean.TRUE};
-        ParseException differentTypesException = null;
+        IllegalArgumentException differentTypesException = null;
         try {
             ParserHelper.convertSingleTypeArray(differentTypes);
-        } catch (ParseException e) {
+        } catch (IllegalArgumentException e) {
             differentTypesException = e;
         }
-        assertNotNull("Expected a ParseException when the Object array contains multiple types.", differentTypesException);
+        assertNotNull("Expected a IllegalArgumentException when the Object array contains multiple types.", differentTypesException);
 
         Object[] values = new Object[] {1, 2, 3, 4, 5};
         Object result = ParserHelper.convertSingleTypeArray(values);

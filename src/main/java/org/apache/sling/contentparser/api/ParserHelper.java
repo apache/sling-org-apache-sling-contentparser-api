@@ -69,8 +69,8 @@ public final class ParserHelper {
      *
      * @param values the multi-value property's values
      * @return an object representation of the multi-value property
-     * @throws ParseException when the provided {@code values} array contains null values, {@link Map} values, or the values are not of the
-     *                        same type
+     * @throws IllegalArgumentException when the provided {@code values} array contains null values, {@link Map} values, or the values are
+     *                                  not of the same type
      */
     public static Object convertSingleTypeArray(Object[] values) {
         if (values.length == 0) {
@@ -79,15 +79,15 @@ public final class ParserHelper {
         Class<?> itemType = null;
         for (Object value : values) {
             if (value == null) {
-                throw new ParseException("Multi-value array must not contain null values.");
+                throw new IllegalArgumentException("Multi-value array must not contain null values.");
             }
             if (value instanceof Map) {
-                throw new ParseException("Multi-value array must not contain maps/objects.");
+                throw new IllegalArgumentException("Multi-value array must not contain maps/objects.");
             }
             if (itemType == null) {
                 itemType = value.getClass();
             } else if (itemType != value.getClass()) {
-                throw new ParseException("Multi-value array must not contain values with different types "
+                throw new IllegalArgumentException("Multi-value array must not contain values with different types "
                         + "(" + itemType.getName() + ", " + value.getClass().getName() + ").");
             }
         }
