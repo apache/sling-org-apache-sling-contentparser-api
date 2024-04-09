@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
     Licensed to the Apache Software Foundation (ASF) under one
     or more contributor license agreements.  See the NOTICE file
@@ -30,28 +30,14 @@
     <version>2.0.1-SNAPSHOT</version>
 
     <name>Apache Sling Content Parser API</name>
-    <description>
-        API for parsing Apache Sling Resource trees stored in files (e.g. JSON, FileVault XML, etc.)
-    </description>
+    <description>API for parsing Apache Sling Resource trees stored in files (e.g. JSON, FileVault XML, etc.)</description>
 
     <scm>
         <connection>scm:git:https://gitbox.apache.org/repos/asf/sling-org-apache-sling-contentparser-api.git</connection>
         <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/sling-org-apache-sling-contentparser-api.git</developerConnection>
-        <url>https://github.com/apache/sling-org-apache-sling-contentparser-api.git</url>
         <tag>HEAD</tag>
+        <url>https://github.com/apache/sling-org-apache-sling-contentparser-api.git</url>
     </scm>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>biz.aQute.bnd</groupId>
-                <artifactId>bnd-baseline-maven-plugin</artifactId>
-                <configuration>
-                    <failOnMissing>false</failOnMissing>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
     <dependencies>
         <dependency>
@@ -65,4 +51,16 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>biz.aQute.bnd</groupId>
+                <artifactId>bnd-baseline-maven-plugin</artifactId>
+                <configuration>
+                    <failOnMissing>false</failOnMissing>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
