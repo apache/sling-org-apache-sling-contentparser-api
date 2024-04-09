@@ -1,21 +1,21 @@
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- ~ Licensed to the Apache Software Foundation (ASF) under one
- ~ or more contributor license agreements.  See the NOTICE file
- ~ distributed with this work for additional information
- ~ regarding copyright ownership.  The ASF licenses this file
- ~ to you under the Apache License, Version 2.0 (the
- ~ "License"); you may not use this file except in compliance
- ~ with the License.  You may obtain a copy of the License at
- ~
- ~   http://www.apache.org/licenses/LICENSE-2.0
- ~
- ~ Unless required by applicable law or agreed to in writing,
- ~ software distributed under the License is distributed on an
- ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- ~ KIND, either express or implied.  See the License for the
- ~ specific language governing permissions and limitations
- ~ under the License.
- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
 package org.apache.sling.contentparser.api;
 
 import java.lang.reflect.Array;
@@ -37,10 +37,10 @@ public final class ParserHelper {
     private static final String ECMA_DATE_FORMAT = "EEE MMM dd yyyy HH:mm:ss 'GMT'Z";
     private static final String ISO_8601_MILLISECONDS_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSSVV";
     private static final Locale DATE_FORMAT_LOCALE = Locale.US;
-    private static final DateTimeFormatter ECMA_DATE_FORMATTER = DateTimeFormatter.ofPattern(ECMA_DATE_FORMAT, DATE_FORMAT_LOCALE);
+    private static final DateTimeFormatter ECMA_DATE_FORMATTER =
+            DateTimeFormatter.ofPattern(ECMA_DATE_FORMAT, DATE_FORMAT_LOCALE);
     private static final DateTimeFormatter ISO_8601_MILLISECONDS_DATE_FORMATTER =
-            DateTimeFormatter.ofPattern(ISO_8601_MILLISECONDS_DATE_FORMAT,
-                    DATE_FORMAT_LOCALE);
+            DateTimeFormatter.ofPattern(ISO_8601_MILLISECONDS_DATE_FORMAT, DATE_FORMAT_LOCALE);
 
     // static methods only
     private ParserHelper() {}
@@ -106,5 +106,4 @@ public final class ParserHelper {
         calendar.setTimeZone(TimeZone.getTimeZone(zonedDateTime.getOffset()));
         return calendar;
     }
-
 }
